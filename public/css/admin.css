@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+    background: #222d39;
+}
+
+.container {
+    position: absolute;
+    display: block;
+    min-width: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 34px 0 34px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container .back-group {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.container .back-group p {
+    position: relative;
+    display: inline-flex;
+}
+
+.container .back-group a {
+    display: block;
+    text-decoration: none;
+    width: 90px;
+    padding: 10px;
+    color: #3ab14c;
+}
+
+.container .head {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .head h3 {
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 0.1em;
+   margin-bottom: 5px;
+   color: #fff;
+}
+
+.container form .input-group.name-group {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container form .input-group.name-group .name-group-content {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+}
+
+.container form .input-group.name-group .name-group-content label {
+    position: relative;
+    display: inline;
+}
+.container form .input-group.name-group .name-group-content .form-input {
+    width: 90%;
+}
+
+.container form .input-group {
+   position: relative;
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+   margin: 10px 0 10px;
+}
+
+.container form .input-group label {
+    margin-bottom: 3px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+.container form .input-group .form-input.address {
+    height: 45px;
+    text-align-last: left;
+}
+.container form .input-group .form-input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: .3em;
+    border-bottom: 2px solid rgb(5, 31, 45);
+}
+
+.container form .cta {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.container form .cta button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 120px;
+    background: #3373d3;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+.container form .cta p {
+    font-size: 15px;
+    color: #fff;
+}
+
+.container form .cta p>a{
+    text-decoration: none;
+    color: #3ab14c;
+}
+
+.alert {
+    position: absolute;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    text-align-last: left;
+    outline: none;
+    top: 10%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+.alert.alert-success {
+    background: #8bff9c;
+    color: #00500c;
+    border-bottom: 5px solid #003112;
+}

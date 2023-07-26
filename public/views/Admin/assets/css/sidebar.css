@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    transition: all 500ms linear;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+:root {
+    --theme-color: #161d25;
+    --theme-darker: #0c1015;
+    --theme-gray: #e4e4e4;
+    --theme-gray-dark: #b4b4b4;
+    --theme-white: #fafafa;
+    --theme-green: #3ec35d;
+    --theme-success: #0fe200;
+    --theme-danger: #f46f89;
+    --theme-info: #2a5f9c;
+    --theme-warning: #e8ce72;
+}
+
+.admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100vh;
+    background: var(--theme-darker);
+    overflow: hidden;
+}
+
+.admin-sidebar .wrapper .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.admin-sidebar .wrapper .header img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.admin-sidebar .wrapper .header p {
+    color: var(--theme-gray);
+    margin: 5px;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+}
+
+.admin-sidebar .wrapper .header small {
+    margin: 5px;
+    color: var(--theme-gray-dark);
+    letter-spacing: 0.1em;
+}
+
+.admin-sidebar .wrapper .header .ctaIcons {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    background: var(--theme-darker);
+    padding: 10px;
+    margin: 5px;
+    color: var(--theme-white);
+}
+
+.admin-sidebar .wrapper .admin-dashboard-navigation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5px;
+}
+
+i {
+    cursor: pointer;
+}
+
+.admin-sidebar .wrapper .admin-dashboard-navigation .content li {
+    width: 100%;
+    background: var(--theme-darker);
+    margin-top: 10px;
+}
+
+.admin-sidebar .wrapper .admin-dashboard-navigation .content li>a {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    color: var(--theme-white);
+}
+
+.admin-sidebar .wrapper .admin-dashboard-navigation .content li>a i {
+    margin-right: 10px;  
+}
+
+a:hover {
+    background: var(--theme-info);
+}
+
+.navlinkActive {
+    background: var(--theme-info);
+    border-radius: 20px 0px 0px 20px;
+    margin-left: 10px;
+}
+
+
+/* Mobile Responsiveness */
+
+@media only screen and (max-width: 900px) {
+
+    .admin-sidebar {
+        display: none;
+    }
+
+}

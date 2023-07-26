@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: var(--theme-color);
+    font-weight: 500;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    transition: all 500ms linear;
+}
+
+:root {
+    --theme-color: #161d25;
+    --theme-darker: #0c1015;
+    --theme-gray: #e4e4e4;
+    --theme-gray-dark: #b4b4b4;
+    --theme-white: #fafafa;
+    --theme-green: #3ec35d;
+    --theme-success: #0fe200;
+    --theme-danger: #f46f89;
+    --theme-info: #2a5f9c;
+    --theme-warning: #e8ce72;
+}
+
+body {
+    background-color: var(--theme-white);
+}
+
+.userNavTrigger {
+    display: none;
+}
+.ogx-navContainer {
+    display: none;
+}
+.ogx-navContainerOverlay {
+    display: none;
+}
+
+.navbar .wrapper .navs .ogx-userCta {
+    position: absolute;
+    display: none;
+    top: 40px;
+    left: 25px;
+    padding: 10px;  
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.navbar .wrapper .navs .ogx-userCta.active {
+    display: block;
+}
+.navbar .wrapper .navs .ogx-userCta li {
+    padding: 10px;
+    width: 100%;
+}
+
+
+
+/* Mobile Responsiveness */
+
+@media only screen and (max-width: 900px) {
+    
+    .navbar .wrapper .navs {
+        display: none;
+    }
+
+    .navbar .wrapper .userNavTrigger {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        padding: 5px;
+        float: right;
+        cursor: pointer;
+    }
+
+    .navbar .wrapper .userNavTrigger span:hover {
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar .wrapper .userNavTrigger span {
+        width: 100%;
+        height: 3px;
+        background: var(--theme-darker);
+        margin-top: 3px;
+        border-radius: .3em;
+    }
+
+    .ogx-navContainerOverlay {
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--theme-color);
+        opacity: .6;
+    }
+
+    .ogx-navContainer {
+        position: fixed;
+        display: block;
+        visibility: hidden;
+        top: 0;
+        right: -100%;
+        min-width: 50%;
+        height: 100vh;
+        background: var(--theme-white);
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .active {
+        visibility: visible;
+        right: 0;
+    }
+
+    .ogx-navContainer .wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: inherit;
+    }
+
+    .ogx-navContainer .wrapper .head {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        top: 20px;
+    }
+
+    .ogx-navContainer .wrapper .head p {
+        font-size: 13px;
+        opacity: .8;
+        margin: 5px;
+        letter-spacing: 0.1em;
+    }
+
+    .ogx-navContainer .wrapper .head .ogxNavCloseBtn {
+        position: absolute;
+       right: 5px;
+       font-weight: 500;
+       font-size: 20px;
+       cursor: pointer;
+    }
+
+    .ogx-navContainer .wrapper .navigations {
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       top: 50px;
+    }
+    
+    .ogx-navContainer .wrapper .navigations li {
+        position: relative;
+        display: flex;
+        margin-top: 10px;
+        background: var(--theme-info);
+    }
+        
+    .ogx-navContainer .wrapper .navigations li a {
+        padding: 10px;
+        width: 100%;
+        color: var(--theme-white);
+    }
+
+}

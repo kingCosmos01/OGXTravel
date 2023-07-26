@@ -1,0 +1,144 @@
+* {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    transition: all 500ms linear;
+}
+
+.tripPaymentForm {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background: #00000097;
+}
+.tripPaymentForm form {
+    position: absolute;
+    padding: 20px 34px 12px;
+    width: 320px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #19282e;
+    justify-content: center;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: .5em;
+}
+
+.tripPaymentForm form h3 {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.tripPaymentForm form input {
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: #eaeaea;
+    top: 20%;
+}
+.tripPaymentForm form button {
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: #2c7a0b;
+    color: #fff;
+    top: 20%;
+    cursor: pointer;
+}
+
+.tripPaymentForm form button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.tripPaymentForm .card {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 23px 18px;
+    background: #eaeaea;
+    border-radius: .2em;
+    box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.tripPaymentForm .card .head {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+}
+
+.tripPaymentForm .card .head th {
+    padding: 10px;
+}
+
+.tripPaymentForm .card tr {
+    width: 100%;
+    background: #eaeaea;
+}
+
+.tripPaymentForm .card tr:nth-child(even){
+    background: #d8d8d8;
+}
+
+.tripPaymentForm .card .closeBtn {
+   position: absolute;
+   display: block;
+   right: 10px;
+   font-size: 28px;
+   width: 25px;
+   height: 25px;
+   line-height: 25px;
+   border-radius: 50%;
+   justify-content: center;
+   text-align: center;
+   cursor: pointer;
+   z-index: 99;
+}
+
+.tripPaymentForm .card tr th {
+    font-weight: 500;
+    font-weight: bold;
+}
+
+.tripPaymentForm .card tr td {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    font-size: 15px;
+
+}
+
+.tripPaymentForm .card tr.saveGroup {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.tripPaymentForm .card tr.saveGroup .saveBtn {
+    width: 100%;
+   padding: 10px;
+   margin: 10px;
+   color: #fff;
+   justify-content: center;
+   cursor: pointer;
+   background: #141c21;
+}

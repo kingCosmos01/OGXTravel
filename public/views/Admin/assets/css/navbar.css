@@ -1,0 +1,272 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    transition: all 500ms linear;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+:root {
+    --theme-color: #161d25;
+    --theme-darker: #0c1015;
+    --theme-gray-dark: #ccc;
+    --theme-gray: #e4e4e4;
+    --theme-white: #fafafa;
+    --theme-green: #3ec35d;
+    --theme-success: #0fe200;
+    --theme-danger: #f46f89;
+    --theme-info: #2a5f9c;
+    --theme-warning: #e8ce72;
+}
+
+.admin-navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    right: 0;
+    width: 85%;
+    background: var(--theme-white);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.admin-navbar .wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.admin-navbar .wrapper .left-group .logo {
+    position: relative;
+    display: block;
+    justify-content: center;
+    top: 10px;
+}
+
+.admin-navbar .wrapper .left-group .logo img {
+    width: 55px;
+    height: 55px;
+}
+
+.admin-navbar .wrapper .left-group {
+    position: relative;
+    display: flex;
+    flex: 2;
+    width: 100%;
+    margin: 5px;
+    justify-content: space-evenly;
+}
+
+.admin-navbar .wrapper .left-group .navTrigger {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+    top: 30%;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.admin-navbar .wrapper .left-group .navTrigger span {
+   position: relative;
+   display: block;
+   width: 100%;
+   height: 3px;
+   margin-top: 3px;   
+   border-radius: 2em; 
+
+   background: var(--theme-darker);
+}
+
+.admin-navbar .wrapper .left-group .searchGroup {
+    position: relative;
+    display: flex;
+    top: 25%;
+}
+
+.admin-navbar .wrapper .left-group .searchGroup .admin-search {
+    border: none;
+    outline: none;
+    width: 340px;
+    padding: 10px;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.admin-navbar .wrapper .left-group .searchGroup button {
+    position: relative;
+    display: inline-flex;
+    border: none;
+    outline: none;
+    padding: 11px;
+    right: 3px;
+    background: var(--theme-green);
+    color: var(--theme-white);
+    font-size: 13px;
+    font-weight: normal;
+    cursor: pointer;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.fa-solid {
+    font-size: 20px;
+}
+
+.admin-navbar .wrapper .right-group {
+    position: relative;
+    display: inline-flex;
+    flex: 1;
+    flex-direction: row;
+    width: 100%;
+    margin: 20px;
+    justify-content: space-evenly;
+}
+
+.admin-navbar .wrapper .right-group .notificationNav {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    top: 5px;
+}
+
+.admin-navbar .wrapper .right-group .messageNav {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    top: 5px;
+}
+.admin-navbar .wrapper .right-group .notificationNav span {
+    position: absolute;
+    display: block;
+    top: -2px;
+    right: -3px;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 50%;
+    justify-content: center;
+    text-align: center;
+    line-height: 10px;
+    color: var(--theme-white);
+    background: var(--theme-danger);
+}
+
+.admin-navbar .wrapper .right-group .messageNav span {
+    position: absolute;
+    display: block;
+    top: -2px;
+    right: -3px;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 50%;
+    justify-content: center;
+    text-align: center;
+    line-height: 10px;
+    color: var(--theme-white);
+    background: var(--theme-danger);
+}
+
+.admin-navbar .wrapper .right-group .userCta {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.admin-navbar .wrapper .right-group .userCta img {
+    position: relative;
+    display: inline;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.admin-navbar .wrapper .right-group .userCta p {
+    position: relative;
+    display: inline-flex;
+    top: 30%;
+    left: 5px;
+    color: var(--theme-color);
+}
+
+.admin-navbar .wrapper .right-group .userCta span {
+    position: relative;
+    display: inline-flex;
+    top: 45%;
+    width: 10px;
+    height: 3px;
+    border-radius: .2em;
+    background: var(--theme-color);
+}
+
+
+.admin-navbar .wrapper .right-group .userCta span:nth-of-type(1) {
+    transform: rotate(45deg);
+}
+
+.admin-navbar .wrapper .right-group .userCta span:nth-of-type(2) {
+    transform: rotate(-45deg);
+    left: -17px;
+}
+
+.admin-navbar .wrapper .right-group .settingsCta {
+    position: relative;
+    display: inline-flex;
+    top: 30%;
+    cursor: pointer;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 900px) {
+
+    .admin-navbar {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: var(--theme-white);
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .admin-navbar .wrapper .left-group {
+        justify-content: space-around;
+    }
+    
+
+    .admin-navbar .wrapper .left-group .searchGroup {
+        display: none;
+    }
+    
+    .admin-navbar .wrapper .left-group .logo {
+        position: relative;
+        display: block;
+        top: 50px;
+        justify-content: center;
+    }
+    
+    .admin-navbar .wrapper .left-group .logo img {
+       transform: scale(3);
+    }
+
+    .admin-navbar .wrapper .right-group {
+        display: none;
+    }
+
+  
+}

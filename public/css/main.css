@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: var(--theme-color);
+    font-weight: 500;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    transition: all 500ms linear;
+}
+
+:root {
+    --theme-color: #161d25;
+    --theme-darker: #0c1015;
+    --theme-gray: #e4e4e4;
+    --theme-gray-dark: #b4b4b4;
+    --theme-white: #fafafa;
+    --theme-green: #3ec35d;
+    --theme-success: #0fe200;
+    --theme-danger: #f46f89;
+    --theme-info: #2a5f9c;
+    --theme-warning: #e8ce72;
+}
+
+body {
+    background-color: var(--theme-white);
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: 100%;
+    background: var(--theme-white);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.navbar .wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.navbar .wrapper .logo h2 {
+    font-weight: 500;
+}
+
+.navbar .wrapper .logo span {
+    color: var(--theme-green);
+}
+
+.navbar .wrapper .navs ul {
+    position: relative;
+    display: flex;
+    top: 5px;
+}
+
+.navbar .wrapper .navs ul li:nth-child(4)::after {
+    content: '|';
+    margin-left: 20px;
+}
+
+.navbar .wrapper .navs ul li a {
+    margin-left: 30px;
+}
+
+.active {
+    color: var(--theme-green);
+}
+
+/* ogx-container */
+.ogx-container {
+    position: relative;
+    display: block;
+    top: 55px;
+    max-width: 80%; 
+    left: 130px;
+    background: var(--theme-white);
+}
+
+.ogx-container .ogx-welcome-head {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 90px;
+}
+
+.ogx-container .ogx-welcome-head p.ogx-head {
+    font-size: 20px;
+    color: var(--theme-green);
+}
+
+.ogx-container .ogx-welcome-head h1 {
+    width: 400px;
+    line-height: 50px;
+}
+
+.ogx-container .ogx-welcome-head .ogx-phrase {
+    font-size: 17px;
+    width: 320px;
+}
+
+.ogx-container .ogx-main-center {
+    width: 100%;
+}
+
+.ogx-container .ogx-main-center img {
+    width: 100%;
+    scale: .8;
+    margin-top: -90px;
+}
+
+.ogx-cta-btn {
+    background: var(--theme-green);
+    color: var(--theme-white);
+    padding: 10px;
+    border-radius: .3em;
+}
+
+.ogx-cta-btn.ogx-danger {
+    background: var(--theme-danger);
+    color: var(--theme-white);
+    padding: 10px;
+    border-radius: .3em;
+}
+
+.ogx-cta-btn.ogx-info {
+    background: var(--theme-info);
+    color: var(--theme-white);
+    padding: 10px;
+    border-radius: .3em;
+}
+
+
+/* ogx-footer */
+.ogx-footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid var(--theme-success);
+}
+
+.appLoader {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--theme-color);
+    z-index: 999;
+}
+
+.appLoader .spinner {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border-top: 5px solid var(--theme-danger);
+    z-index: 9999;
+    animation: spin 2ms backwards infinite;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.scrollTop {
+    position: fixed;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 50px;
+    right: 50px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--theme-green);
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.scrollTop span {
+    position: relative;
+    display: block;
+    width: 15px;
+    height: 5px;
+    left: 10px;
+    border-radius: .3em;
+    background: var(--theme-white);
+}
+
+.scrollTop span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 20px;
+}
+.scrollTop span:nth-child(2) {
+    transform: rotate(45deg);
+    left: 19px;
+    top: 16px;
+}
